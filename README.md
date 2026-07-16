@@ -41,19 +41,19 @@ The application utilizes a **centralized state architecture** located in `App.ts
         +--------------+--------------+
         |                             |
         v                             v
- +------------+               +---------------+
- |  Port.tsx  |               | PortDashboard |
- | (Add Coin) |               |  (Fetch API)  |
- +-----+------+               +-------+-------+
-       |                              |
-       | Passes New Holding           | Passes Live Prices
-       | via handleInput()            | & Updated Dashboard
-       v                              v
-[State Updated] -------------->  [State Updated]
-                                      |
-                                      | Passes holdings,
-                                      | live prices & metrics
-                                      v
+        +------------+               +---------------+
+        |  Port.tsx  |               | PortDashboard |
+        | (Add Coin) |               |  (Fetch API)  |
+        +-----+------+               +-------+-------+
+            |                              |
+            | Passes New Holding           | Passes Live Prices
+            | via handleInput()            | & Updated Dashboard
+            v                              v
+      [State Updated] -------------->  [State Updated]
+                                        |
+                                        | Passes holdings,
+                                        | live prices & metrics
+                                        v
                                +--------------+
                                |  Mycoin.tsx  |
                                | (Asset List) |
